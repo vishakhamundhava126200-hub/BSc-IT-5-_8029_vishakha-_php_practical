@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    
+    function loginCheck() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+        if (username === "admin" && password === "12345") {
+            alert("Login Successful!");
+            return true;
+        } 
+        else {
+            alert("Invalid Username or Password!");
+            return false;
+        }
+    }
+</script>
+
+<body>
+    <center>
+    <h3> User Login </h3>
+    <form  onsubmit="return loginCheck();">
+            Enter Username:
+            <input type="text" name="username" id="username"><br><br>
+            Enter password:
+            <input type="text" name="password" id="password"><br><br>
+            
+            <input type="Submit" name="login" value="Login">
+    </form>
+    </center>
+</body>
+</html>
